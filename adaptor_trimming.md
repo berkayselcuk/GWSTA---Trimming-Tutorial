@@ -37,7 +37,15 @@ Then sum up the numbers, starting from the end (partial sums). Stop early if the
 The numbers in parentheses are not computed (because 8 is greater than zero), but shown here for completeness. The position of the minimum (-25) is used as the trimming position. Therefore, the read is trimmed to the first four bases, which have quality values 42, 40, 26, 27.
 
 ### Command Line  
-#### Features
+
+Usage:
+    cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq
+
+For paired-end reads:
+    cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq
+
+#### Important Features
+
 
 Finding adapters:
   Parameters -a, -g, -b specify adapters to be removed from each read (or
@@ -46,46 +54,38 @@ Finding adapters:
   option). When the special notation 'file:FILE' is used, adapter sequences
   are read from the given FASTA file.
 
-  **-a ADAPTER, - -adapter ADAPTER **
-Sequence of an adapter ligated to the 3' end.
+  **-a ADAPTER, --adapter ADAPTER**
+						Sequence of an adapter ligated to the 3' end.
 
- ** -g ADAPTER, - -front ADAPTER**
+  **-g ADAPTER, --front ADAPTER**
                         Sequence of an adapter ligated to the 5' end.
 
-  **-b ADAPTER, - -anywhere ADAPTER**
+  **-b ADAPTER, --anywhere ADAPTER**
                         Sequence of an adapter that may be ligated to the 5'
                         or 3' end .
 
-  **--no-indels **          Allow only mismatches in alignments. Default: allow
+  **--no-indels **      Allow only mismatches in alignments. Default: allow
                         both mismatches and indels
-
-  --nextseq-trim 3'CUTOFF
-                        NextSeq-specific quality trimming (each read). Trims
-                        also dark cycles appearing as high-quality G bases.
 						
-  -q [5'CUTOFF,]3'CUTOFF, --quality-cutoff [5'CUTOFF,]3'CUTOFF
+  **-q [5'CUTOFF,]3'CUTOFF, --quality-cutoff [5'CUTOFF,]3'CUTOFF**
                         Trim low-quality bases from 5' and/or 3' ends of each
                         read before adapter removal. Applied to both reads if
                         data is paired. If one value is given, only the 3' end
                         is trimmed. If two comma-separated cutoffs are given,
                         the 5' end is trimmed with the first cutoff, the 3'
                         end with the second.
-  --quality-base N      Assume that quality values in FASTQ are encoded as
-                        ascii(quality + N). This needs to be set to 64 for
-                        some old Illumina FASTQ files. Default: 33
 
-  -o FILE, --output FILE
+  **-o FILE, --output FILE**
 
 Paired-end options:
   The -A/-G/-B/-U options work like their -a/-b/-g/-u counterparts, but are
   applied to the second read in each pair.
 
-  -A ADAPTER            3' adapter to be removed from second read in a pair.
-  -G ADAPTER            5' adapter to be removed from second read in a pair.
-  -B ADAPTER            5'/3 adapter to be removed from second read in a pair.
-  -U LENGTH             Remove LENGTH bases from second read in a pair.
-  -p FILE, --paired-output FILE
-                        Write second read in a pair to FILE.
+  **-A ADAPTER**            3' adapter to be removed from second read in a pair.
+  **-G ADAPTER**            5' adapter to be removed from second read in a pair.
+  **-B ADAPTER**            5'/3 adapter to be removed from second read in a pair.
+  **-p FILE --paired-output FILE**	
+                        
 
 Single end command line example
 
@@ -93,11 +93,12 @@ Single end command line example
 
 Paired end command line example
 
-``cutadapt -a ADAPTER_FWD -A ADAPTER_REV -o out.1.fastq -p out.2.fastq reads.1.fastq reads.2.fast``
+``cutadapt -a ADAPTER_FWD -A ADAPTER_REV -o out.1.fastq -p out.2.fastq reads.1.fastq reads.2.fastq``
 
 ### Today\`s Tutorial
-How to download data?
+**How to download data?**
 module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws
+fastq-dump SRRxxxxxxxxxx
 
 Two different data:
 [Single end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114778)
@@ -106,5 +107,6 @@ Adapter: NNNNNNCACTCGGGCACCAAGGAC
 [Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)
 Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
+module load cutadapt-2.5
 
 

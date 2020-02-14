@@ -1,14 +1,15 @@
 ## FASTQ Trimming Tutorial  
-###Why do we trim fastq files?
+
+### Why do we trim fastq files?
 
 Adapter sequences should be removed from reads because they interfere with downstream analyses, such as alignment of reads to a reference. For example, if we don\`t remove any adaptors in an expression analysis we will not be obtaining the gene expression data because we can\`t align sequences to the genes.
 
-![illumina_respresntative](https://supportassets.illumina.com/content/dam/illumina-support/images/bulletins/PEcell1.png 'MiSeq, HiSeq 2000/2500 and NovaSeq paired-end flow cell' )
+![illumina_respresntative](https://supportassets.illumina.com/content/dam/illumina-support/images/bulletins/PEcell1.png 'MiSeq, HiSeq 2000/2500 and NovaSeq paired-end flow cell' )  
 **Figure 1: Representative model of how adapters are used during sequencing.**
 
 The other reason why we trim sequences can be low quality. This indicates us we should do FASTQC analysis before performing trimming. 
 
-![bad quailty fastq](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc.png)
+![bad quailty fastq](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc.png)  
 **Figure 2: An example of bad sequence quality score in FASTQC analysis.**
 
 ### How adapter trimming works?

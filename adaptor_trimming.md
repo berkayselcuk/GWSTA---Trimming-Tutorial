@@ -120,7 +120,7 @@ To obtain data:
 `cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA -o SRR10251291_1_trimmed.fastq -p SRR10251291_2_trimmed.fastq SRR10251291_1.fastq SRR10251291_2.fastq`  
 
 
-### Usefull Links  
+### Useful Links  
 Illumina Adapter Sequences:  
 https://support.illumina.com/downloads/illumina-adapter-sequences-document-1000000002694.html
 

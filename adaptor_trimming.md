@@ -39,10 +39,10 @@ The numbers in parentheses are not computed (because 8 is greater than zero), bu
 ### Command Line  
 
 Usage:  
-cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq
+`cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq`
 
 For paired-end reads:  
-cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq
+`cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq`
 
 #### Important Features
 
@@ -109,15 +109,15 @@ Adapter: NNNNNNCACTCGGGCACCAAGGAC
 [Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)  
 Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
-To obtain data:
+To obtain data:  
  `cp "/cta/users/bselcuk/gwsta/alignment_trimming_tutorial/" <your directory>`
 
+**Solution:**
+`
 module load cutadapt-2.5
-
 cutadapt -a NNNNNNCACTCGGGCACCAAGGAC -o SRR10251284_trimmed.fastq SRR10251284.fastq  
-
 cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA -o SRR10251291_1_trimmed.fastq -p SRR10251291_2_trimmed.fastq SRR10251291_1.fastq SRR10251291_2.fastq
-
+`
 
 ### Usefull Links  
 Illumina Adapter Sequences:  

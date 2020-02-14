@@ -64,8 +64,8 @@ Finding adapters:
                         Sequence of an adapter that may be ligated to the 5'
                         or 3' end .
 
-  **--no-indels**       Allow only mismatches in alignments. Default: allow
-                        both mismatches and indels
+  **--no-indels**  
+  Allow only mismatches in alignments. Default: allow both mismatches and indels
 						
   **-q [5'CUTOFF,]3'CUTOFF, --quality-cutoff [5'CUTOFF,]3'CUTOFF**  
                         Trim low-quality bases from 5' and/or 3' ends of each
@@ -96,17 +96,21 @@ Paired end command line example
 ``cutadapt -a ADAPTER_FWD -A ADAPTER_REV -o out.1.fastq -p out.2.fastq reads.1.fastq reads.2.fastq``
 
 ### Today\`s Tutorial
-**How to download data?**
-module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws
+**How to download data?**  
+module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws  
 fastq-dump SRRxxxxxxxxxx
 
-Two different data:
+Two different data:  
 [Single end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114778)
 Adapter: NNNNNNCACTCGGGCACCAAGGAC
 
-[Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)
+[Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)  
 Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
 module load cutadapt-2.5
+
+###Usefull Links  
+Illumina Adapter Sequences:  
+https://support.illumina.com/downloads/illumina-adapter-sequences-document-1000000002694.html
 
 

@@ -101,7 +101,7 @@ module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws
 fastq-dump SRRxxxxxxxxxx
 
 Two different data:  
-[Single end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114778)
+[Single end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114778)  
 Adapter: NNNNNNCACTCGGGCACCAAGGAC
 
 [Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)  
@@ -109,7 +109,7 @@ Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
 module load cutadapt-2.5
 
-###Usefull Links  
+### Usefull Links  
 Illumina Adapter Sequences:  
 https://support.illumina.com/downloads/illumina-adapter-sequences-document-1000000002694.html
 

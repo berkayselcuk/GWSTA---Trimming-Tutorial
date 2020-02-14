@@ -1,4 +1,4 @@
-##FASTQ Trimming Tutorial
+##FASTQ Trimming Tutorial  
 ###Why do we trim fastq files?
 
 Adapter sequences should be removed from reads because they interfere with downstream analyses, such as alignment of reads to a reference. For example, if we don\`t remove any adaptors in an expression analysis we will not be obtaining the gene expression data because we can\`t align sequences to the genes.
@@ -35,7 +35,7 @@ Then sum up the numbers, starting from the end (partial sums). Stop early if the
 
 The numbers in parentheses are not computed (because 8 is greater than zero), but shown here for completeness. The position of the minimum (-25) is used as the trimming position. Therefore, the read is trimmed to the first four bases, which have quality values 42, 40, 26, 27.
 
-###Command Line
+###Command Line  
 ####Features
 
 Finding adapters:

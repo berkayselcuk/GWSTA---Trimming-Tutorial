@@ -100,6 +100,8 @@ Paired end command line example
 module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws  
 fastq-dump SRRxxxxxxxxxx
 
+**Trimming**
+
 Two different data:  
 [Single end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114778)  
 Adapter: NNNNNNCACTCGGGCACCAAGGAC
@@ -107,7 +109,15 @@ Adapter: NNNNNNCACTCGGGCACCAAGGAC
 [Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)  
 Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
+To obtain data:
+ `cp "/cta/users/bselcuk/gwsta/alignment_trimming_tutorial/" <your directory>`
+
 module load cutadapt-2.5
+
+cutadapt -a NNNNNNCACTCGGGCACCAAGGAC -o SRR10251284_trimmed.fastq SRR10251284.fastq  
+
+cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA -o SRR10251291_1_trimmed.fastq -p SRR10251291_2_trimmed.fastq SRR10251291_1.fastq SRR10251291_2.fastq
+
 
 ### Usefull Links  
 Illumina Adapter Sequences:  

@@ -38,11 +38,11 @@ The numbers in parentheses are not computed (because 8 is greater than zero), bu
 
 ### Command Line  
 
-Usage:
-    cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq
+Usage:  
+	+ cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq
 
-For paired-end reads:
-    cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq
+For paired-end reads:  
+	+ cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq
 
 #### Important Features
 
@@ -54,20 +54,20 @@ Finding adapters:
   option). When the special notation 'file:FILE' is used, adapter sequences
   are read from the given FASTA file.
 
-  **-a ADAPTER, --adapter ADAPTER**
+  **-a ADAPTER, --adapter ADAPTER**  
 						Sequence of an adapter ligated to the 3' end.
 
-  **-g ADAPTER, --front ADAPTER**
+  **-g ADAPTER, --front ADAPTER**  
                         Sequence of an adapter ligated to the 5' end.
 
   **-b ADAPTER, --anywhere ADAPTER**
                         Sequence of an adapter that may be ligated to the 5'
                         or 3' end .
 
-  **--no-indels **      Allow only mismatches in alignments. Default: allow
+  **--no-indels**       Allow only mismatches in alignments. Default: allow
                         both mismatches and indels
 						
-  **-q [5'CUTOFF,]3'CUTOFF, --quality-cutoff [5'CUTOFF,]3'CUTOFF**
+  **-q [5'CUTOFF,]3'CUTOFF, --quality-cutoff [5'CUTOFF,]3'CUTOFF**  
                         Trim low-quality bases from 5' and/or 3' ends of each
                         read before adapter removal. Applied to both reads if
                         data is paired. If one value is given, only the 3' end
@@ -77,13 +77,13 @@ Finding adapters:
 
   **-o FILE, --output FILE**
 
-Paired-end options:
-  The -A/-G/-B/-U options work like their -a/-b/-g/-u counterparts, but are
+Paired-end options:  
+  The -A/-G/-B/-U options work like their -a/-b/-g/-u counterparts, but are  
   applied to the second read in each pair.
 
-  **-A ADAPTER**            3' adapter to be removed from second read in a pair.
-  **-G ADAPTER**            5' adapter to be removed from second read in a pair.
-  **-B ADAPTER**            5'/3 adapter to be removed from second read in a pair.
+  **-A ADAPTER**            3' adapter to be removed from second read in a pair.  
+  **-G ADAPTER**            5' adapter to be removed from second read in a pair.  
+  **-B ADAPTER**            5'/3 adapter to be removed from second read in a pair.  
   **-p FILE --paired-output FILE**	
                         
 

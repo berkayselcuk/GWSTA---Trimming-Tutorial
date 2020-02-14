@@ -39,10 +39,10 @@ The numbers in parentheses are not computed (because 8 is greater than zero), bu
 ### Command Line  
 
 Usage:  
-	+ cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq
+cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq
 
 For paired-end reads:  
-	+ cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq
+cutadapt -a ADAPT1 -A ADAPT2 [options] -o out1.fastq -p out2.fastq in1.fastq in2.fastq
 
 #### Important Features
 

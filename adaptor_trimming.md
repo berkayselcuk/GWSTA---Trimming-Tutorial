@@ -112,10 +112,13 @@ Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 To obtain data:  
  `cp "/cta/users/bselcuk/gwsta/alignment_trimming_tutorial/" <your directory>`
 
-**Solution:**
+**Solution:**  
+
 `
-module load cutadapt-2.5
-cutadapt -a NNNNNNCACTCGGGCACCAAGGAC -o SRR10251284_trimmed.fastq SRR10251284.fastq  
+module load cutadapt-2.5  
+
+cutadapt -a NNNNNNCACTCGGGCACCAAGGAC -o SRR10251284_trimmed.fastq SRR10251284.fastq 
+ 
 cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA -o SRR10251291_1_trimmed.fastq -p SRR10251291_2_trimmed.fastq SRR10251291_1.fastq SRR10251291_2.fastq
 `
 

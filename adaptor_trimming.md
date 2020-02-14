@@ -1,4 +1,4 @@
-##FASTQ Trimming Tutorial  
+## FASTQ Trimming Tutorial  
 ###Why do we trim fastq files?
 
 Adapter sequences should be removed from reads because they interfere with downstream analyses, such as alignment of reads to a reference. For example, if we don\`t remove any adaptors in an expression analysis we will not be obtaining the gene expression data because we can\`t align sequences to the genes.
@@ -11,7 +11,7 @@ The other reason why we trim sequences can be low quality. This indicates us we 
 ![bad quailty fastq](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc.png)
 **Figure 2: An example of bad sequence quality score in FASTQC analysis.**
 
-###How adapter trimming works?
+### How adapter trimming works?
 Conceptually, the procedure is as follows:
 
 1. Consider all possible overlaps between the two sequences and compute an alignment for each, minimizing the total number of errors in each one.
@@ -20,7 +20,7 @@ Conceptually, the procedure is as follows:
 4. If there are multiple alignments with the same number of matches, then keep only those that have the smallest error rate.
 5. If there are still multiple candidates left, choose the alignment that starts at the leftmost position within the read.  
 
-###How quailty trimming works?
+### How quailty trimming works?
 Assume you use a threshold of 10 and have these quality values:
 
 42, 40, 26, 27, 8, 7, 11, 4, 2, 3
@@ -35,8 +35,8 @@ Then sum up the numbers, starting from the end (partial sums). Stop early if the
 
 The numbers in parentheses are not computed (because 8 is greater than zero), but shown here for completeness. The position of the minimum (-25) is used as the trimming position. Therefore, the read is trimmed to the first four bases, which have quality values 42, 40, 26, 27.
 
-###Command Line  
-####Features
+### Command Line  
+#### Features
 
 Finding adapters:
   Parameters -a, -g, -b specify adapters to be removed from each read (or
@@ -94,7 +94,7 @@ Paired end command line example
 
 ``cutadapt -a ADAPTER_FWD -A ADAPTER_REV -o out.1.fastq -p out.2.fastq reads.1.fastq reads.2.fast``
 
-###Today\`s Tutorial
+### Today\`s Tutorial
 How to download data?
 module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws
 

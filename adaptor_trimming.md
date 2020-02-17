@@ -96,10 +96,6 @@ Paired end command line example
 ``cutadapt -a ADAPTER_FWD -A ADAPTER_REV -o out.1.fastq -p out.2.fastq reads.1.fastq reads.2.fastq``
 
 ### Today\`s Tutorial
-**How to download data?**  
-module load sra-toolkit-2.9.6-gcc-8.2.0-5fl2qws  
-fastq-dump SRRxxxxxxxxxx
-
 Two different data:  
 [Single end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114778)  
 Adapter: NNNNNNCACTCGGGCACCAAGGAC
@@ -107,9 +103,8 @@ Adapter: NNNNNNCACTCGGGCACCAAGGAC
 [Paired end data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4114785)  
 Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
-To obtain data:  
- `mkdir trimming_tutorial`  
- `cp "/cta/users/bselcuk/gwsta/trimming_tutorial/" trimming_tutorial/`
+To obtain data:   
+ `cp -r /cta/users/bselcuk/gwsta/trimming_tutorial/ trimming_tutorial`
 
 **First Part: Adapter Trimming**  
 1. Obtain the data end template sh file.  
@@ -122,7 +117,7 @@ To obtain data:
 3. Submit job and state the results.
 
 **Third Part: Remove Adapters Given In A Text File**  
-
+1. Go to the cutadapt user guide and perform the first part by using "adapters.fa" in your directory.
 
 ### Useful Links  
 Cutadapt User Guide:  

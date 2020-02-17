@@ -108,7 +108,7 @@ Adapter: NNNNNNCACTCGGGCACCAAGGAC
 Adapter: AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC, AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
 
 To obtain data:  
- `mkdir trimming_tutorial`
+ `mkdir trimming_tutorial`  
  `cp "/cta/users/bselcuk/gwsta/trimming_tutorial/" trimming_tutorial/`
 
 **First Part: Adapter Trimming**  
@@ -116,10 +116,13 @@ To obtain data:
 2. Fill the missing parts in command line of the cutadapt.sh file.
 3. Submit your sh file and state the results from your out file.
 
-**Second Part: Remove Adaptor Containing Sequences**  
+**Second Part: Remove Adapter Containing Sequences**  
 1. Go to the cutadapt user guide or type cutadapt -h in order to see how you can do that.
 2. Modify the sh file.
 3. Submit job and state the results.
+
+**Third Part: Remove Adapters Given In A Text File**  
+
 
 ### Useful Links  
 Cutadapt User Guide:  
